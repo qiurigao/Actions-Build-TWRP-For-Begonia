@@ -111,7 +111,7 @@ jobs:
           cd ${{env.WorkSpace}}
           source build/envsetup.sh
           export ALLOW_MISSING_DEPENDENCIES=true
-          lunch omni_${{ env.device }}-eng
+          lunch twrp_${{ env.device }}-eng
           repo sync -j4
           mka ${{env.target}}
         shell: bash
