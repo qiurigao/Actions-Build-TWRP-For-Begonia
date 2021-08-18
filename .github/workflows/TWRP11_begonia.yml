@@ -73,6 +73,7 @@ jobs:
       - name: Sync device tree
         run: |
           cd ${{env.WorkSpace}}
+          git clone https://github.com/qiurigao/device_oneplus_sm8350-common-TWRP device/oneplus/sm8350-common
           git clone ${{ env.DT_url }} --depth=1 --single-branch ${{ env.DT_path }}
           cd ${{ env.DT_path }}
           #sed -i 's/vendor\/omni/vendor\/twrp/g' omni_${{ env.device }}.mk
