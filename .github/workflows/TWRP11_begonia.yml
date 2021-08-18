@@ -26,7 +26,7 @@ env:
   Rec_url: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp -b twrp-11
   device: lemonadep
   DT_url: https://github.com/qiurigao/device_oneplus_lemonadep-TWRP -b android-11
-  DT_path: evice/oneplus/lemonadep
+  DT_path: device/oneplus/lemonadep
   target: recoveryimage
   WorkSpace: WorkSpace
   TZ: Asia/Shanghai
