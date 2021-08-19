@@ -25,8 +25,8 @@ env:
   Rec_ver: 3.5.2
   Rec_url: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp -b twrp-11
   device: lemonadep
-  DT_url: https://github.com/qiurigao/device_oneplus_lemonadep-TWRP -b android-11
-  DT_path: device/oneplus/lemonadep
+  DT_url: https://github.com/nebrassy/device_xiaomi_vayu-TWRP
+  DT_path: device/xiaomi/vayu
   target: recoveryimage
   WorkSpace: WorkSpace
   TZ: Asia/Shanghai
@@ -73,7 +73,7 @@ jobs:
       - name: Sync device tree
         run: |
           cd ${{env.WorkSpace}}
-          git clone https://github.com/qiurigao/device_oneplus_sm8350-common-TWRP device/oneplus/sm8350-common
+          #git clone https://github.com/qiurigao/device_oneplus_sm8350-common-TWRP device/oneplus/sm8350-common
           git clone ${{ env.DT_url }} --depth=1 --single-branch ${{ env.DT_path }}
           cd ${{ env.DT_path }}
           #sed -i 's/vendor\/omni/vendor\/twrp/g' omni_${{ env.device }}.mk
